@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SP-019 CSV to JSON</title>
+</head>
+<body>
+  <h2>CSV → JSON</h2>
+
+  <form action="/api/csv/to-json" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".csv" required />
+    <button type="submit">Convert</button>
+  </form>
+</body>
+</html>
