@@ -2,6 +2,13 @@ import express from "express";
 import dotenv from "dotenv";
 import csvRoutes from './routes/csv.routes.js';
 
+import fs from "fs";
+
+["src/uploads", "src/outputs"].forEach(dir => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+});
 
 dotenv.config();
 
